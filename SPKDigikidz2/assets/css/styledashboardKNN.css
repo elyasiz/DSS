@@ -1,0 +1,84 @@
+/* Styling KNN Section */
+#knnSection {
+    display: none; /* Initially hidden */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#knnSection h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk form input */
+#knnSection .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#knnSection .form-group label {
+    flex-basis: 30%;
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 36px;
+}
+
+#knnSection .form-group input, 
+#knnSection .form-group select {
+    flex-basis: 65%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+#knnSection .form-group input:focus, 
+#knnSection .form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Styling untuk tombol */
+#knnSection .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#knnSection .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    #knnSection .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #knnSection .form-group label {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    #knnSection .form-group input, 
+    #knnSection .form-group select {
+        flex-basis: 100%;
+    }
+}

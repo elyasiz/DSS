@@ -1,0 +1,364 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    color: #333;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    transition: left 0.3s ease;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar .profile p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.sidebar .profile small {
+    color: #888;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background-color: #f4f7fc;
+    color: #007bff;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar.hidden {
+    transform: translateX(-250px);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100% - 250px);
+}
+
+.main-content.shifted {
+    margin-left: 0;
+}
+
+/* Header */
+.main-content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-content .header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.main-content .header .user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.main-content .header .user-info p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Stats */
+.main-content .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.main-content .stats .stat {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.main-content .stats .stat:last-child {
+    margin-right: 0;
+}
+
+.main-content .stats .stat i {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.main-content .stats .stat p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.main-content .stats .stat small {
+    color: #888;
+}
+
+/* Dashboard Section */
+.main-content .dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content .dashboard img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Data Murid Section */
+#dataMuridSection {
+    display: none;
+}
+
+.table-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.table-header .btn {
+    background-color: #e94560;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.table-header .btn:hover {
+    background-color: #d6374e;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f7f9;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-controls {
+    display: flex;
+    align-items: center;
+}
+
+.table-controls select, .table-controls input {
+    margin-left: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Data Kriteria Section */
+#dataKriteriaSection {
+    display: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #e94560;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #d6374e;
+}
+
+/* KNN Section */
+#knnSection {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#knnSection h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#knnSection .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#knnSection .form-group label {
+    flex-basis: 30%;
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 36px;
+}
+
+#knnSection .form-group input, 
+#knnSection .form-group select {
+    flex-basis: 65%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+#knnSection .form-group input:focus, 
+#knnSection .form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+#knnSection .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#knnSection .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    #knnSection .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #knnSection .form-group label {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    #knnSection .form-group input, 
+    #knnSection .form-group select {
+        flex-basis: 100%;
+    }
+}

@@ -1,0 +1,291 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    transition: left 0.3s ease;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar .profile p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar ul li:hover, .sidebar ul li.active {
+    background-color: #f4f7fc;
+    color: #007bff;
+}
+
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar.hidden {
+    transform: translateX(-250px);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-content .header .user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* Stats */
+.main-content .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.main-content .stats .stat {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.main-content .stats .stat:last-child {
+    margin-right: 0;
+}
+
+.main-content .stats .stat i {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Dashboard */
+.main-content .dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Container */
+.table-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header .btn {
+    background-color: #e94560;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.table-header .btn:hover {
+    background-color: #d6374e;
+}
+
+.table-controls select, .table-controls input {
+    margin-left: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f7f9;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td .actions i:hover {
+    color: #e94560;
+}
+
+/* KNN Section */
+#knnSection {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#knnSection .form-group label {
+    flex-basis: 30%;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 36px;
+}
+
+#knnSection .form-group input, 
+#knnSection .form-group select {
+    flex-basis: 65%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+#knnSection .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#knnSection .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #e94560;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #d6374e;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-250px);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    #knnSection .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #knnSection .form-group label {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    #knnSection .form-group input, 
+    #knnSection .form-group select {
+        flex-basis: 100%;
+    }
+}

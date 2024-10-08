@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dataTraining.css">
+    <title>Data Training</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Data Training</h2>
+        <div class="controls">
+            <label>Show 
+                <select id="entriesCount" class="entries">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select> 
+                entries
+            </label>
+            <input type="text" id="searchInput" class="search" placeholder="Search...">
+        </div>
+        <table id="dataTrainingTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>C1</th>
+                    <th>C2</th>
+                    <th>C3</th>
+                    <th>C4</th>
+                    <th>C5</th>
+                    <th>D6</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated by JS -->
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="pageInfo">Page 1 of 1</span>
+            <button id="nextPage">Next</button>
+        </div>
+    </div>
+
+    <script src="dataTraining.js"></script>
+</body>
+</html>
